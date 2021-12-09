@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1638591546.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Salut petit, fait attention aux ennemies, s'ils te touche 4 fois tu meurt.\nBonne chance!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.3",
+		"file": "timeline-1638593819.json",
+		"name": "welcome_fr"
+	}
+}

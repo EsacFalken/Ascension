@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1638591546.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Do you know that you can reapparaitre on your last checkpoint if you pressed\non \"R\" or \"Start\" or on dying ?"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.3",
+		"file": "timeline-1638858333.json",
+		"name": "prev_en"
+	}
+}

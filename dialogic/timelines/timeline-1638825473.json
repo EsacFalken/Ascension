@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1638591546.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Resalut petit, si tu veux atteindre le sommet, sert toi des checkpoints,\ncomme celui la. Tu n'as qu'a passer dessus et ca sauvegarde\nautomatiquement ta progression!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.3",
+		"file": "timeline-1638825473.json",
+		"name": "rewelcome_fr"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1638591546.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Felicitations, tu as atteint le sommet.\nComme on-dit 'Un grand voyage commence par un petit pas', et t'en as fait\ndes pas jusqu'ici. Merci d'avoir jouer, tu peux maintenant quitter le jeu."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.3",
+		"file": "timeline-1638858346.json",
+		"name": "finally_fr"
+	}
+}

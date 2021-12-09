@@ -1,0 +1,262 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Fonts/dysin4mation.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/fibberish.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Inputs/tile_0004.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Inputs/tile_0728.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Inputs/tile_0088.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Inputs/tile_0122.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/Bitty.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/Inputs/tile_0005.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Inputs/tile_0694.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Inputs/tile_0250.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Inputs/tile_0248.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Inputs/tile_0017.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Inputs/tile_0735.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Inputs/tile_0007.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Inputs/tile_0086.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Inputs/tile_0120.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/controls.gd" type="Script" id=17]
+[ext_resource path="res://Sprites/Inputs/tile_0235.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Inputs/tile_0237.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Inputs/tile_0236.png" type="Texture" id=20]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+extra_spacing_space = -2
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 7 )
+
+[node name="Controls" type="Node2D"]
+position = Vector2( 6, 1 )
+script = ExtResource( 17 )
+
+[node name="Bg" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_top = -10.0
+margin_right = 320.0
+margin_bottom = 195.0
+color = Color( 0.2, 0.231373, 0.309804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 115.0
+margin_top = 17.0
+margin_right = 182.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 0.584314, 0.603922, 0.694118, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "CONTROLES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Movement" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 101.0
+margin_right = 66.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Se Deplacer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controllers" type="Node2D" parent="Movement"]
+
+[node name="Sprite" type="Sprite" parent="Movement/Controllers"]
+position = Vector2( 14, -12 )
+texture = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="Movement/Controllers"]
+position = Vector2( 36, -12 )
+texture = ExtResource( 11 )
+
+[node name="Clavier" type="Node2D" parent="Movement"]
+
+[node name="Sprite" type="Sprite" parent="Movement/Clavier"]
+position = Vector2( 14, -29 )
+texture = ExtResource( 16 )
+
+[node name="Sprite2" type="Sprite" parent="Movement/Clavier"]
+position = Vector2( 36, -29 )
+texture = ExtResource( 6 )
+
+[node name="Jump" type="Label" parent="."]
+margin_left = 77.0
+margin_top = 101.0
+margin_right = 106.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Sauter"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controllers" type="Node2D" parent="Jump"]
+
+[node name="Sprite" type="Sprite" parent="Jump/Controllers"]
+position = Vector2( 14, -12 )
+texture = ExtResource( 3 )
+
+[node name="Clavier" type="Node2D" parent="Jump"]
+
+[node name="Sprite" type="Sprite" parent="Jump/Clavier"]
+position = Vector2( 14, -29 )
+texture = ExtResource( 15 )
+
+[node name="DoubleJump" type="Label" parent="."]
+margin_left = 120.0
+margin_top = 101.0
+margin_right = 182.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Double Sauter"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controllers" type="Node2D" parent="DoubleJump"]
+
+[node name="Sprite" type="Sprite" parent="DoubleJump/Controllers"]
+position = Vector2( 18, -12 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="DoubleJump/Controllers"]
+position = Vector2( 40, -12 )
+texture = ExtResource( 3 )
+
+[node name="Clavier" type="Node2D" parent="DoubleJump"]
+
+[node name="Sprite" type="Sprite" parent="DoubleJump/Clavier"]
+position = Vector2( 18, -29 )
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="DoubleJump/Clavier"]
+position = Vector2( 40, -29 )
+texture = ExtResource( 15 )
+
+[node name="Shoot" type="Label" parent="."]
+margin_left = 191.0
+margin_top = 101.0
+margin_right = 214.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Tirer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controllers" type="Node2D" parent="Shoot"]
+
+[node name="Sprite" type="Sprite" parent="Shoot/Controllers"]
+position = Vector2( 11, -12 )
+texture = ExtResource( 8 )
+
+[node name="Clavier" type="Node2D" parent="Shoot"]
+
+[node name="Sprite" type="Sprite" parent="Shoot/Clavier"]
+position = Vector2( 11, -29 )
+texture = ExtResource( 20 )
+
+[node name="Tile0235" type="Sprite" parent="Shoot/Clavier/Sprite"]
+position = Vector2( -15, 0 )
+texture = ExtResource( 18 )
+
+[node name="Tile0237" type="Sprite" parent="Shoot/Clavier/Sprite"]
+position = Vector2( 15, 0 )
+texture = ExtResource( 19 )
+
+[node name="Pause" type="Label" parent="."]
+margin_left = 229.0
+margin_top = 101.0
+margin_right = 254.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Pause"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controllers" type="Node2D" parent="Pause"]
+
+[node name="Sprite" type="Sprite" parent="Pause/Controllers"]
+position = Vector2( 11, -12 )
+texture = ExtResource( 13 )
+
+[node name="Clavier" type="Node2D" parent="Pause"]
+
+[node name="Sprite" type="Sprite" parent="Pause/Clavier"]
+position = Vector2( 11, -29 )
+texture = ExtResource( 12 )
+
+[node name="Restart" type="Label" parent="."]
+margin_left = 264.0
+margin_top = 101.0
+margin_right = 299.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Rejouer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controllers" type="Node2D" parent="Restart"]
+
+[node name="Sprite" type="Sprite" parent="Restart/Controllers"]
+position = Vector2( 14, -12 )
+texture = ExtResource( 14 )
+
+[node name="Clavier" type="Node2D" parent="Restart"]
+
+[node name="Sprite" type="Sprite" parent="Restart/Clavier"]
+position = Vector2( 14, -29 )
+texture = ExtResource( 5 )
+
+[node name="Tile0728" type="Sprite" parent="."]
+position = Vector2( 149, 89 )
+texture = ExtResource( 4 )
+
+[node name="Tile0694" type="Sprite" parent="."]
+position = Vector2( 149, 72 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 31.0
+margin_top = 138.0
+margin_right = 273.0
+margin_bottom = 152.0
+custom_colors/font_color = Color( 0.584314, 0.603922, 0.694118, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Appyuer sur   ou   pour retourner a l'ecran d'acceuil"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tile0017" type="Sprite" parent="."]
+position = Vector2( 90, 146 )
+texture = ExtResource( 12 )
+
+[node name="Tile0005" type="Sprite" parent="."]
+position = Vector2( 115, 146 )
+texture = ExtResource( 8 )

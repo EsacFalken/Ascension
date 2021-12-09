@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1638591546.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not bad Dude. If you want hit the peak of this mountain, use checkpoints like\nthis one. Tu n'as qu'a passer dessus and it save automaticly your progression!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.3",
+		"file": "timeline-1638825479.json",
+		"name": "rewelcome_en"
+	}
+}

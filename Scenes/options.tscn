@@ -1,0 +1,260 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/Arrow.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/fibberish.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Buttons/small_hover.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Buttons/large_hover.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Buttons/small_normal.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Buttons/large_normal.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Buttons/small_pressed.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Buttons/large_pressed.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/options.gd" type="Script" id=9]
+[ext_resource path="res://Sprites/Buttons/large_pressed0.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+extra_spacing_space = -4
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+extra_spacing_space = -4
+font_data = ExtResource( 2 )
+
+[node name="Options" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 9 )
+
+[node name="Bg0" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 320.0
+margin_bottom = 179.0
+color = Color( 0.2, 0.231373, 0.309804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bg" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 179.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 46.0
+margin_right = 320.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Title"]
+margin_left = 135.0
+margin_right = 184.0
+margin_bottom = 14.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Options:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 77.0
+margin_right = 320.0
+margin_bottom = 179.0
+size_flags_horizontal = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+margin_left = 65.0
+margin_right = 255.0
+margin_bottom = 102.0
+size_flags_horizontal = 4
+custom_constants/separation = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="HBoxContainer" parent="Menu/VBoxContainer"]
+margin_right = 190.0
+margin_bottom = 17.0
+custom_constants/separation = 12
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Language"]
+margin_top = 1.0
+margin_right = 46.0
+margin_bottom = 15.0
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Langue:"
+
+[node name="En" type="TextureButton" parent="Menu/VBoxContainer/Language"]
+margin_left = 58.0
+margin_right = 118.0
+margin_bottom = 17.0
+size_flags_horizontal = 4
+toggle_mode = true
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Language/En"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 1.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "En"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fr" type="TextureButton" parent="Menu/VBoxContainer/Language"]
+margin_left = 130.0
+margin_right = 190.0
+margin_bottom = 17.0
+size_flags_horizontal = 4
+toggle_mode = true
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Language/Fr"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 1.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Fr"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="TextureButton" parent="Menu/VBoxContainer"]
+margin_left = 16.0
+margin_top = 21.0
+margin_right = 173.0
+margin_bottom = 38.0
+size_flags_horizontal = 4
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Timer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Afficher le Timer"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PV" type="TextureButton" parent="Menu/VBoxContainer"]
+margin_left = 16.0
+margin_top = 42.0
+margin_right = 173.0
+margin_bottom = 59.0
+size_flags_horizontal = 4
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/PV"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 1.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Afficher les PV"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="TextureButton" parent="Menu/VBoxContainer"]
+margin_left = 16.0
+margin_top = 63.0
+margin_right = 173.0
+margin_bottom = 80.0
+size_flags_horizontal = 4
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Return"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 1.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Retour"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="TextureRect" parent="."]
+margin_left = 109.0
+margin_top = 78.0
+margin_right = 125.0
+margin_bottom = 94.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Menu/VBoxContainer/Language/En" to="." method="_on_En_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Language/Fr" to="." method="_on_Fr_pressed"]
+[connection signal="button_up" from="Menu/VBoxContainer/Timer" to="." method="_on_Timer_button_up"]
+[connection signal="pressed" from="Menu/VBoxContainer/Timer" to="." method="_on_Timer_pressed"]
+[connection signal="button_up" from="Menu/VBoxContainer/PV" to="." method="_on_PV_button_up"]
+[connection signal="pressed" from="Menu/VBoxContainer/PV" to="." method="_on_PV_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Return" to="." method="_on_Return_pressed"]

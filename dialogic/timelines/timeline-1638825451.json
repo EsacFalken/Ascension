@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1638591546.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi Dude, take an eye on the ennemies, if they touch you four times, you die.\nGood Luck!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.3",
+		"file": "timeline-1638825451.json",
+		"name": "welcome_en"
+	}
+}

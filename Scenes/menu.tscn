@@ -1,0 +1,190 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/Bubble Butts.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/fibberish.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Arrow.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/menu.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/Buttons/normal.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Buttons/hover.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Buttons/pressed.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -11.0
+margin_top = -10.0
+margin_right = 340.0
+margin_bottom = 208.0
+color = Color( 0.2, 0.231373, 0.309804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 320.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Title"]
+margin_left = 88.0
+margin_top = 28.0
+margin_right = 232.0
+margin_bottom = 44.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.172549, 0.772549, 0.964706, 1 )
+custom_colors/font_color_shadow = Color( 0.00392157, 0.592157, 0.776471, 1 )
+custom_constants/shadow_offset_x = 0
+custom_fonts/font = SubResource( 1 )
+text = "ASCENSION"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_right = 320.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+margin_left = 123.0
+margin_right = 197.0
+margin_bottom = 100.0
+size_flags_horizontal = 4
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="TextureButton" parent="Menu/VBoxContainer"]
+margin_right = 74.0
+margin_bottom = 17.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Play"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Jouer"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="TextureButton" parent="Menu/VBoxContainer"]
+margin_top = 18.0
+margin_right = 74.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Controls"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 1.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Controles"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="TextureButton" parent="Menu/VBoxContainer"]
+margin_top = 36.0
+margin_right = 74.0
+margin_bottom = 53.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 1.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Options"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TextureButton" parent="Menu/VBoxContainer"]
+margin_top = 54.0
+margin_right = 74.0
+margin_bottom = 71.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer/Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = 1.0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.886275, 0.886275, 0.886275, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Quitter"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="TextureRect" parent="."]
+margin_left = 109.0
+margin_top = 80.0
+margin_right = 125.0
+margin_bottom = 96.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Menu/VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
