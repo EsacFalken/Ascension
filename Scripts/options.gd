@@ -4,10 +4,12 @@ signal trnsltn()
 signal close_options()
 onready var timer = $Menu/VBoxContainer/Timer
 onready var pv = $Menu/VBoxContainer/PV
-
+onready var arrow = $Arrow
+var selected_option := 0
 
 
 func _ready():
+	arrow.rect_position.y = 77 + (selected_option % 4) * 21
 	if get_tree().current_scene.name == 'Level':
 		$Bg0.visible = false
 		$Bg.visible = true
@@ -23,6 +25,65 @@ func _ready():
 			$Menu/VBoxContainer/Language/En.pressed = false
 			$Menu/VBoxContainer/Language/Fr.pressed = true
 
+	match Global.chrono:
+		true:
+			$Menu/VBoxContainer/Timer.pressed = true
+		false:
+			$Menu/VBoxContainer/Timer.pressed = false
+		
+	match Global.pv:
+		true:
+			$Menu/VBoxContainer/PV.pressed = true
+		false:
+			$Menu/VBoxContainer/PV.pressed = false
+
+
+func _process(_delta):
+	if arrow.rect_position.y == 77:
+		arrow.rect_position.x = 109
+	else:
+		arrow.rect_position.x = 67
+
+
+func _input(event):
+
+	print(arrow.rect_position.y)
+	if visible:
+
+		if arrow.rect_position == Vector2(109, 77):
+			if Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left"):
+				arrow.rect_position = Vector2(181, 77)
+
+		if Input.is_action_pressed("ui_down"):
+			selected_option += 1
+			arrow.rect_position.y = 77 + (selected_option % 4) * 21
+		elif Input.is_action_pressed("ui_up"):
+			if selected_option == 0:
+				selected_option = 3
+			else:
+				selected_option -= 1
+			arrow.rect_position.y = 77 + (selected_option % 4) * 21
+
+		elif Input.is_action_pressed("ui_accept"):
+			if arrow.rect_position == Vector2(109, 77):
+				$Menu/VBoxContainer/Language/En.pressed = true
+				_on_En_pressed()
+			elif arrow.rect_position.y == 98:
+				if $Menu/VBoxContainer/Timer.pressed == true:
+					Global.chrono = true
+					emit_signal("trnsltn")
+				else:
+					Global.chrono = false
+					emit_signal("trnsltn")
+			elif arrow.rect_position.y == 119:
+				if $Menu/VBoxContainer/PV.pressed == true:
+					Global.pv = true
+					emit_signal("trnsltn")
+				else:
+					Global.pv = false
+					emit_signal("trnsltn")
+			elif arrow.rect_position.y == 140:
+				_on_Return_pressed()
 
 
 func trnslt():
@@ -60,21 +121,21 @@ func _on_Fr_pressed():
 	emit_signal("trnsltn")
 
 
-func _on_Timer_pressed():
-	Global.chrono = true
-	emit_signal("trnsltn")
+func _on_Timer_toggled(button_pressed):
+	if button_pressed:
+		Global.chrono = true
+		emit_signal("trnsltn")
+	else:
+		Global.chrono = false
+		emit_signal("trnsltn")
 
 
-func _on_PV_pressed():
-	Global.pv = true
-	emit_signal("trnsltn")
+func _on_PV_toggled(button_pressed):
+	if button_pressed:
+		Global.pv = true
+		emit_signal("trnsltn")
+	else:
+		Global.pv = false
+		emit_signal("trnsltn")
 
 
-func _on_Timer_button_up():
-	Global.chrono = false
-	emit_signal("trnsltn")
-
-
-func _on_PV_button_up():
-	Global.pv = false
-	emit_signal("trnsltn")

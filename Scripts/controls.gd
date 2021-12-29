@@ -4,19 +4,21 @@ extends Node2D
 func _ready():
 	match Global.lang:
 		'en':
-			$Label.text = 'CONTROLS'
-			$Movement.label = 'Movement'
-			$Jump.label = 'Jump'
+			$Title.text = 'CONTROLS'
+			$Movement.text = 'Movement'
+			$Jump.text = 'Jump'
 			$DoubleJump.text = 'Double Jump'
-			$Shoot.label = 'Shoot'
-			$Restart.label = 'Restart'
+			$Shoot.text = 'Shoot'
+			$Restart.text = 'Restart'
+			$Label.text = 'Press on   or   for return to the title screen'
 		'fr':
-			$Label.text = 'CONTROLES'
-			$Movement.label = 'Se Deplacer'
-			$Jump.label = 'Sauter'
+			$Title.text = 'CONTROLES'
+			$Movement.text = 'Se Deplacer'
+			$Jump.text = 'Sauter'
 			$DoubleJump.text = 'Double Sauter'
-			$Shoot.label = 'Tirer'
-			$Restart.label = 'Rejouer'
+			$Shoot.text = 'Tirer'
+			$Restart.text = 'Rejouer'
+			$Label.text = "Appyuer sur   ou   pour retourner a l'ecran titre    "
 
 
 func _input(event):

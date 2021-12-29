@@ -248,7 +248,8 @@ margin_right = 273.0
 margin_bottom = 152.0
 custom_colors/font_color = Color( 0.584314, 0.603922, 0.694118, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Appyuer sur   ou   pour retourner a l'ecran d'acceuil"
+text = "Appyuer sur   ou   pour retourner a l'ecran titre    "
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

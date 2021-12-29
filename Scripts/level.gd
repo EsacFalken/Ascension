@@ -9,6 +9,9 @@ const posC = Vector2(825, -487)
 const posD = Vector2(886, -1271)
 
 func _ready():
+
+	$CanvasLayer/PauseMenu/Menu/VBoxContainer/Play.grab_focus()
+
 	$CanvasLayer/Options.connect('close_options', self, 'options_closed')
 	$CanvasLayer/PauseMenu.connect('open_options', self, 'options_opened')
 	$CanvasLayer/Options.connect('trnsltn', self, 'get_trnsltn')
@@ -131,11 +134,9 @@ func anim_save():
 
 
 func options_closed():
-	print("CLOSE ?")
 	pauseMenu.visible = true
 
 func options_opened():
-	print("OPEN ?")
 	pauseMenu.visible = false
 	options.visible = true
 

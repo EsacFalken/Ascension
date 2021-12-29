@@ -6,6 +6,8 @@ var selected_option := 0
 
 func _ready():
 
+	$Menu/VBoxContainer/Play.grab_focus()
+
 	match Global.lang:
 		'fr':
 			$Menu/VBoxContainer/Play/Label.text = "Jouer"
@@ -21,10 +23,6 @@ func _ready():
 
 func _input(event):
 
-	if Input.is_action_pressed("reset"):
-		print('start_joy_vibration')
-		Input.start_joy_vibration(0, 0.3, 0.7, 0.2)
-
 	if Input.is_action_pressed("ui_down"):
 		selected_option += 1
 		select_arrow.rect_position.y = 80 + (selected_option % 4) * 18
@@ -35,19 +33,19 @@ func _input(event):
 			selected_option -= 1
 		select_arrow.rect_position.y = 80 + (selected_option % 4) * 18
 
-	elif Input.is_action_pressed("ui_accept"):
-		if select_arrow.rect_position.y == 80:
-			_on_Play_pressed()
-		elif select_arrow.rect_position.y == 98:
-			_on_Controls_pressed()
-		elif select_arrow.rect_position.y == 116:
-			_on_Options_pressed()
-		elif select_arrow.rect_position.y == 134:
-			_on_Exit_pressed()
+#	elif Input.is_action_pressed("ui_accept"):
+#		if select_arrow.rect_position.y == 80:
+#			_on_Play_pressed()
+#		elif select_arrow.rect_position.y == 98:
+#			_on_Controls_pressed()
+#		elif select_arrow.rect_position.y == 116:
+#			_on_Options_pressed()
+#		elif select_arrow.rect_position.y == 134:
+#			_on_Exit_pressed()
 
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://Scenes/level.tscn")
+	SceneChanger.change_scene("res://Scenes/level.tscn", "fade")
 
 
 func _on_Controls_pressed():

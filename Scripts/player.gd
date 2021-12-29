@@ -85,9 +85,9 @@ func applyControls():
 		movementVelocity.x = movementSpeed
 		sprite.flip_h = false
 		
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") && Global.canShoot == false:
 		
-		if is_on_floor() && Global.canShoot == false:
+		if is_on_floor():
 			$Sfx/Jump.play()
 			jump(1)
 			doubleJump = true

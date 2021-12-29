@@ -45,15 +45,18 @@ _global_script_class_icons={
 [application]
 
 config/name="Ascension"
+config/description="You incarnate un litle blue guy of his ascension of a mountain."
 run/main_scene="res://Scenes/menu.tscn"
 boot_splash/image="res://boot_splash.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
 Global="*res://Scripts/Global.gd"
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
+SceneChanger="*res://Scenes/SceneChanger.tscn"
 
 [display]
 

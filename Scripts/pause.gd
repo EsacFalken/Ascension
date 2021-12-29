@@ -50,5 +50,5 @@ func _on_Options_pressed():
 
 
 func _on_Exit_pressed():
-	get_tree().change_scene("res://Scenes/menu.tscn")
+	SceneChanger.change_scene("res://Scenes/menu.tscn", "fade")
 	get_tree().paused = false

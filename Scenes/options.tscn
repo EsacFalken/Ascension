@@ -30,7 +30,7 @@ script = ExtResource( 9 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 320.0
-margin_bottom = 179.0
+margin_bottom = 181.0
 color = Color( 0.2, 0.231373, 0.309804, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -38,7 +38,7 @@ __meta__ = {
 
 [node name="Bg" type="ColorRect" parent="."]
 margin_right = 320.0
-margin_bottom = 179.0
+margin_bottom = 181.0
 color = Color( 0, 0, 0, 0.501961 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -243,9 +243,9 @@ __meta__ = {
 
 [node name="Arrow" type="TextureRect" parent="."]
 margin_left = 109.0
-margin_top = 78.0
+margin_top = 77.0
 margin_right = 125.0
-margin_bottom = 94.0
+margin_bottom = 93.0
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -253,8 +253,6 @@ __meta__ = {
 
 [connection signal="pressed" from="Menu/VBoxContainer/Language/En" to="." method="_on_En_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Language/Fr" to="." method="_on_Fr_pressed"]
-[connection signal="button_up" from="Menu/VBoxContainer/Timer" to="." method="_on_Timer_button_up"]
-[connection signal="pressed" from="Menu/VBoxContainer/Timer" to="." method="_on_Timer_pressed"]
-[connection signal="button_up" from="Menu/VBoxContainer/PV" to="." method="_on_PV_button_up"]
-[connection signal="pressed" from="Menu/VBoxContainer/PV" to="." method="_on_PV_pressed"]
+[connection signal="toggled" from="Menu/VBoxContainer/Timer" to="." method="_on_Timer_toggled"]
+[connection signal="toggled" from="Menu/VBoxContainer/PV" to="." method="_on_PV_toggled"]
 [connection signal="pressed" from="Menu/VBoxContainer/Return" to="." method="_on_Return_pressed"]

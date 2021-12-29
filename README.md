@@ -31,5 +31,5 @@ License
 The source code is available under the [MIT license](./LICENSE.txt).
 
 
-➡ Follow me on [Itch.io](https://supaholmes.itch.io) and [GitHub](https://github.com/SupaHolmes) for more games!
+➡ Follow me on [Itch.io](https://supaholmes.itch.io) and [GitHub](https://github.com/SupaHolmes) for more games
 ➡ Contact : [Gmail](supaholmes@gmail.com)
