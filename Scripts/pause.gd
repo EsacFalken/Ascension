@@ -41,14 +41,20 @@ func _input(event):
 
 
 func _on_Play_pressed():
+	Sfx.click.play()
+	yield(get_tree().create_timer(0.1), "timeout")
 	get_tree().paused = false
 	self.visible = false
 
 
 func _on_Options_pressed():
+	Sfx.click.play()
+	yield(get_tree().create_timer(0.1), "timeout")
 	emit_signal("open_options")
 
 
 func _on_Exit_pressed():
+	Sfx.click.play()
+	yield(get_tree().create_timer(0.1), "timeout")
 	SceneChanger.change_scene("res://Scenes/menu.tscn", "fade")
 	get_tree().paused = false

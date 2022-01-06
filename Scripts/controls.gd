@@ -23,4 +23,5 @@ func _ready():
 
 func _input(event):
 	if Input.is_action_pressed("esc"):
+		Sfx.click.play()
 		get_tree().change_scene("res://Scenes/menu.tscn")

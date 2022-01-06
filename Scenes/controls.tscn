@@ -248,14 +248,14 @@ margin_right = 273.0
 margin_bottom = 152.0
 custom_colors/font_color = Color( 0.584314, 0.603922, 0.694118, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Appyuer sur   ou   pour retourner a l'ecran titre    "
+text = "Press on   or   for return to the title screen"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tile0017" type="Sprite" parent="."]
-position = Vector2( 90, 146 )
+position = Vector2( 92, 146 )
 texture = ExtResource( 12 )
 
 [node name="Tile0005" type="Sprite" parent="."]

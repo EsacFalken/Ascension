@@ -143,8 +143,6 @@ func options_opened():
 
 func get_trnsltn():
 
-	print("TRANSLATION")
-
 	match Global.lang:
 		'fr':
 			$CanvasLayer/PauseMenu/Menu/VBoxContainer/Play/Label.text = "Reprendre"

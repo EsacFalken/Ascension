@@ -13,17 +13,22 @@ func _ready():
 	if get_tree().current_scene.name == 'Level':
 		$Bg0.visible = false
 		$Bg.visible = true
-	else:
+	elif get_tree().current_scene.name == 'Options':
 		$Bg0.visible = true
 		$Bg.visible = false
+	if OS.window_fullscreen == true:
+		$Menu/VBoxContainer/FullScreen.pressed = true
+	elif OS.window_fullscreen == false:
+		$Menu/VBoxContainer/FullScreen.pressed = false
+		
 	trnslt()
-	match Global.lang:
-		'en':
-			$Menu/VBoxContainer/Language/En.pressed = true
-			$Menu/VBoxContainer/Language/Fr.pressed = false
-		'fr':
-			$Menu/VBoxContainer/Language/En.pressed = false
-			$Menu/VBoxContainer/Language/Fr.pressed = true
+#	match Global.lang:
+#		'en':
+#			$Menu/VBoxContainer/Language/En.pressed = true
+#			$Menu/VBoxContainer/Language/Fr.pressed = false
+#		'fr':
+#			$Menu/VBoxContainer/Language/En.pressed = false
+#			$Menu/VBoxContainer/Language/Fr.pressed = true
 
 	match Global.chrono:
 		true:
@@ -40,50 +45,55 @@ func _ready():
 
 func _process(_delta):
 	if arrow.rect_position.y == 77:
-		arrow.rect_position.x = 109
-	else:
-		arrow.rect_position.x = 67
+		$Menu/VBoxContainer/FullScreen.grab_focus()
+	elif arrow.rect_position.y == 140:
+		$Menu/VBoxContainer/Return.grab_focus()
+#		119:
+#			print('PV')
+#			$Menu/VBoxContainer/PV.grab_focus()
+#		140:
+#			print('RETURN')
+#			$Menu/VBoxContainer/Return.grab_focus()
 
 
 func _input(event):
 
-	print(arrow.rect_position.y)
 	if visible:
 
-		if arrow.rect_position == Vector2(109, 77):
-			if Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left"):
-				arrow.rect_position = Vector2(181, 77)
-
 		if Input.is_action_pressed("ui_down"):
+			Sfx.focus.play()
 			selected_option += 1
 			arrow.rect_position.y = 77 + (selected_option % 4) * 21
 		elif Input.is_action_pressed("ui_up"):
+			Sfx.focus.play()
 			if selected_option == 0:
 				selected_option = 3
 			else:
 				selected_option -= 1
 			arrow.rect_position.y = 77 + (selected_option % 4) * 21
 
-		elif Input.is_action_pressed("ui_accept"):
-			if arrow.rect_position == Vector2(109, 77):
-				$Menu/VBoxContainer/Language/En.pressed = true
-				_on_En_pressed()
-			elif arrow.rect_position.y == 98:
-				if $Menu/VBoxContainer/Timer.pressed == true:
-					Global.chrono = true
-					emit_signal("trnsltn")
-				else:
-					Global.chrono = false
-					emit_signal("trnsltn")
-			elif arrow.rect_position.y == 119:
-				if $Menu/VBoxContainer/PV.pressed == true:
-					Global.pv = true
-					emit_signal("trnsltn")
-				else:
-					Global.pv = false
-					emit_signal("trnsltn")
-			elif arrow.rect_position.y == 140:
-				_on_Return_pressed()
+#		elif Input.is_action_pressed("ui_accept"):
+#			if arrow.rect_position == 77:
+#				if $Menu/VBoxContainer/FullScreen.pressed == true:
+#					OS.window_fullscreen = true
+#				else:
+#					OS.window_fullscreen = false
+#			elif arrow.rect_position.y == 98:
+#				if $Menu/VBoxContainer/Timer.pressed == true:
+#					Global.chrono = true
+#					emit_signal("trnsltn")
+#				else:
+#					Global.chrono = false
+#					emit_signal("trnsltn")
+#			elif arrow.rect_position.y == 119:
+#				if $Menu/VBoxContainer/PV.pressed == true:
+#					Global.pv = true
+#					emit_signal("trnsltn")
+#				else:
+#					Global.pv = false
+#					emit_signal("trnsltn")
+#			elif arrow.rect_position.y == 140:
+#				_on_Return_pressed()
 
 
 func trnslt():
@@ -100,28 +110,31 @@ func trnslt():
 			$Menu/VBoxContainer/Return/Label.text = "Return"
 
 
-func _on_Return_pressed():
-	if get_tree().current_scene.name == 'Level':
-		self.visible = false
-		emit_signal("close_options")
+
+
+#func _on_En_pressed():
+#	$Menu/VBoxContainer/Language/Fr.pressed = false
+#	Global.lang = 'en'
+#	trnslt()
+#	emit_signal("trnsltn")
+
+#func _on_Fr_pressed():
+#	$Menu/VBoxContainer/Language/En.pressed = false
+#	Global.lang = 'fr'
+#	trnslt()
+#	emit_signal("trnsltn")
+
+
+func _on_FullScreen_toggled(button_pressed):
+	Sfx.click.play()
+	if button_pressed:
+		OS.window_fullscreen = true
 	else:
-		get_tree().change_scene("res://Scenes/menu.tscn")
-
-
-func _on_En_pressed():
-	$Menu/VBoxContainer/Language/Fr.pressed = false
-	Global.lang = 'en'
-	trnslt()
-	emit_signal("trnsltn")
-
-func _on_Fr_pressed():
-	$Menu/VBoxContainer/Language/En.pressed = false
-	Global.lang = 'fr'
-	trnslt()
-	emit_signal("trnsltn")
-
-
+		OS.window_fullscreen = false
+	
+	
 func _on_Timer_toggled(button_pressed):
+	Sfx.click.play()
 	if button_pressed:
 		Global.chrono = true
 		emit_signal("trnsltn")
@@ -131,11 +144,24 @@ func _on_Timer_toggled(button_pressed):
 
 
 func _on_PV_toggled(button_pressed):
+	Sfx.click.play()
 	if button_pressed:
 		Global.pv = true
 		emit_signal("trnsltn")
 	else:
 		Global.pv = false
 		emit_signal("trnsltn")
+
+
+func _on_Return_pressed():
+	Sfx.click.play()
+	if get_tree().current_scene.name == 'Level':
+		self.visible = false
+#		yield(get_tree().create_timer(0.1), "timeout")
+		emit_signal("close_options")
+	else:
+		get_tree().change_scene("res://Scenes/menu.tscn")
+
+
 
 

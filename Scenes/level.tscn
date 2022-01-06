@@ -348,7 +348,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Bee"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -379,7 +378,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Bee2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -410,7 +408,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Bee3"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -442,6 +439,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Fly"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -473,6 +471,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Fly2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -503,7 +502,6 @@ orientation = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Grub"]
 frames = ExtResource( 6 )
-frame = 1
 playing = true
 offset = Vector2( 0, -4 )
 flip_h = true
@@ -535,6 +533,7 @@ orientation = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Grub2"]
 frames = ExtResource( 6 )
+frame = 1
 playing = true
 offset = Vector2( 0, -4 )
 flip_h = true
@@ -566,7 +565,6 @@ orientation = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Grub3"]
 frames = ExtResource( 6 )
-frame = 1
 playing = true
 offset = Vector2( 0, -4 )
 flip_h = true
@@ -601,6 +599,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -631,6 +630,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -661,7 +661,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee3"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -692,7 +691,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee4"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -723,7 +721,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee6"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -754,6 +751,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee7"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -784,6 +782,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee9"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -814,7 +813,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee10"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -845,6 +843,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee12"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -875,6 +874,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee13"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -905,7 +905,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee14"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -936,7 +935,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee15"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -967,6 +965,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee16"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -997,6 +996,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee8"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1027,7 +1027,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee5"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1059,7 +1058,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1091,7 +1089,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1123,7 +1120,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly3"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1155,6 +1151,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly10"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1186,6 +1183,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly5"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1217,7 +1215,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly11"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1249,6 +1246,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly7"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1280,7 +1278,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly12"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1312,6 +1309,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly8"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1343,6 +1341,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly13"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1374,7 +1373,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly14"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1406,6 +1404,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly15"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1437,6 +1436,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly6"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1468,6 +1468,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly4"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1499,7 +1500,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly9"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1530,6 +1530,7 @@ orientation = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Grub"]
 frames = ExtResource( 6 )
+frame = 1
 playing = true
 offset = Vector2( 0, -4 )
 flip_h = true
@@ -1561,7 +1562,6 @@ orientation = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Grub2"]
 frames = ExtResource( 6 )
-frame = 1
 playing = true
 offset = Vector2( 0, -4 )
 flip_h = true
@@ -1593,6 +1593,7 @@ orientation = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Grub3"]
 frames = ExtResource( 6 )
+frame = 1
 playing = true
 offset = Vector2( 0, -4 )
 flip_h = true
@@ -1624,7 +1625,6 @@ orientation = 1
 
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Grub4"]
 frames = ExtResource( 6 )
-frame = 1
 playing = true
 offset = Vector2( 0, -4 )
 flip_h = true

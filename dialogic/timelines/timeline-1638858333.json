@@ -4,7 +4,7 @@
 			"character": "character-1638591546.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Do you know that you can reapparaitre on your last checkpoint if you pressed\non \"R\" or \"Triangle\" or on dying ?"
+			"text": "Do you know that you can reappear directly at your last checkpoint\nby pressing \"R\" or \"Triangle\" or by dying? "
 		}
 	],
 	"metadata": {
