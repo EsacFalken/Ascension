@@ -1,6 +1,6 @@
 # Ascension 
 
-Ascension is a litle action-platformer that i created for my last Game Jam, you incarnate a litle blue guy of his ascension of a mountain.
+Ascension is a small action-platformer that I created during my last game Jam. You play a little blue guy in its climb of a mountain.
 
 Controls
 --------
