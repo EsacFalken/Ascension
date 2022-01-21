@@ -25,7 +25,7 @@ func _ready():
 func _physics_process(delta):
 	
 	if dead :
-		
+		$Check.monitoring = false
 		gravity += gravityPower
 		position.y += gravity * delta
 		

@@ -6,11 +6,21 @@ var selected_option := 0
 
 func _ready():
 
-	$AnimationPlayer.play("intro")
 	$Menu/VBoxContainer/Play.grab_focus()
-	if Input.is_joy_known(0):
-		$start.text = "Press on Start"
-	Input.connect("joy_connection_changed",self,"joy_con_changed")
+
+	match Global.dontShowIntro:
+		true:
+			$start.visible = false
+			$Title.rect_position = Vector2(0, 0)
+			$Menu.visible = true
+			$Arrow.visible = true
+		false:
+			$AnimationPlayer.play("intro")
+			if Input.is_joy_known(0):
+				$start.text = "Press on Start"
+			Input.connect("joy_connection_changed",self,"joy_con_changed")
+			$Arrow.visible = false
+			$Menu.visible = false
 
 	match Global.lang:
 		'fr':
@@ -23,9 +33,6 @@ func _ready():
 			$Menu/VBoxContainer/Exit/Label.text = "Exit"
 
 	select_arrow.rect_position.y = 80 + (selected_option % 4) * 18
-
-	$Arrow.visible = false
-	$Menu.visible = false
 
 
 func joy_con_changed(deviceid,isConnected):
@@ -52,17 +59,18 @@ func _input(_event):
 		$Menu.visible = true
 		$Arrow.visible = true
 
-	if Input.is_action_pressed("ui_down"):
-		Sfx.focus.play()
-		selected_option += 1
-		select_arrow.rect_position.y = 80 + (selected_option % 4) * 18
-	elif Input.is_action_pressed("ui_up"):
-		Sfx.focus.play()
-		if selected_option == 0:
-			selected_option = 3
-		else:
-			selected_option -= 1
-		select_arrow.rect_position.y = 80 + (selected_option % 4) * 18
+	if $Arrow.visible:
+		if Input.is_action_pressed("ui_down"):
+			Sfx.focus.play()
+			selected_option += 1
+			select_arrow.rect_position.y = 80 + (selected_option % 4) * 18
+		elif Input.is_action_pressed("ui_up"):
+			Sfx.focus.play()
+			if selected_option == 0:
+				selected_option = 3
+			else:
+				selected_option -= 1
+			select_arrow.rect_position.y = 80 + (selected_option % 4) * 18
 
 #	elif Input.is_action_pressed("ui_accept"):
 #		if select_arrow.rect_position.y == 80:
@@ -82,15 +90,18 @@ func _process(_delta):
 
 func _on_Play_pressed():
 	Sfx.click.play()
+	Global.dontShowIntro = true
 	SceneChanger.change_scene("res://Scenes/level.tscn", "fade")
 
 
 func _on_Controls_pressed():
 	Sfx.click.play()
+	Global.dontShowIntro = true
 	get_tree().change_scene("res://Scenes/controls.tscn")
 
 
 func _on_Options_pressed():
+	Global.dontShowIntro = true
 	Sfx.click.play()
 	get_tree().change_scene("res://Scenes/options.tscn")
 

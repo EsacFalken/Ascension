@@ -180,26 +180,6 @@ func _on_Cp4_body_entered(body):
 	anim_save()
 
 
-#func _on_Check3_body_entered(body):
-#	$Message/Mess3.visible = true
-
-
-#func _on_Check3_body_exited(body):
-#	$Message/Mess3.visible = false
-
-
-#func _on_Check2_body_entered(body):
-#	$Message/Mess2.visible = true
-
-
-#func _on_Check2_body_exited(body):
-#	$Message/Mess2.visible = false
-
-
-#func _on_Final_body_entered(body):
-#	$Message/Mess4.visible = true
-
-
 func _on_AnimationPlayer_animation_finished(hit):
 	$Player/AnimationPlayer.play("RESET")
 

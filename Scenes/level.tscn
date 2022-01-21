@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Sprites/fly.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Projectile/Projectile.tscn" type="PackedScene" id=2]
@@ -14,24 +14,17 @@
 [ext_resource path="res://Scripts/level.gd" type="Script" id=12]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/pause.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Fonts/Bitty.ttf" type="DynamicFontData" id=15]
-[ext_resource path="res://Sprites/border_01.png" type="Texture" id=16]
 [ext_resource path="res://Sfx/Spinning out.wav" type="AudioStream" id=17]
 [ext_resource path="res://Sprites/tilemap.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/Loadinganim-Sheet.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/options.tscn" type="PackedScene" id=21]
 
-[sub_resource type="DynamicFont" id=6]
-extra_spacing_bottom = -5
-extra_spacing_space = -3
-font_data = ExtResource( 15 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 9.5, 6 )
-
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 5, 5 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 28.5, 5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 8 )
@@ -147,163 +140,6 @@ collision_mask = 3
 format = 1
 tile_data = PoolIntArray( -5439438, 0, 196616, -5439430, 0, 196616, -5373902, 0, 196617, -5373894, 0, 196617, -5308366, 0, 262151, -5308358, 0, 262153, -5242830, 0, 327687, -5242826, 0, 196608, -5242822, 0, 327689, -5177294, 0, 131079, -5177293, 0, 7, -5177292, 0, 4, -5177291, 0, 7, -5177290, 0, 4, -5177289, 0, 7, -5177288, 0, 7, -5177287, 0, 4, -5177286, 0, 131080, -4915152, 0, 65545, -4915135, 0, 9, -4849616, 0, 131081, -4849611, 0, 131079, -4849610, 0, 7, -4849609, 0, 131080, -4784075, 0, 1, -4784074, 0, 2, -4718541, 0, 196613, -4653005, 0, 9, -4587464, 0, 9, -4587438, 0, 9, -4521891, 0, 1, -4521890, 0, 2, -4456389, 0, 196616, -4390853, 0, 327687, -4325318, 0, 131079, -4325317, 0, 131080, -4325287, 0, 9, -4259772, 0, 196616, -4194250, 0, 9, -4194236, 0, 196617, -4194220, 0, 9, -4128705, 0, 196612, -4128702, 0, 196611, -4128700, 0, 327688, -4128694, 0, 196609, -4128693, 0, 196608, -4128682, 0, 1, -4128681, 0, 2, -4063171, 0, 131079, -4063170, 0, 4, -4063169, 0, 4, -4063168, 0, 7, -4063167, 0, 7, -4063166, 0, 4, -4063165, 0, 7, -4063164, 0, 7, -4063163, 0, 131080, -4063159, 0, 131079, -4063158, 0, 131073, -4063157, 0, 131080, -3997623, 0, 65538, -3801011, 0, 3, -3801010, 0, 7, -3801009, 0, 7, -3801008, 0, 8, -3735475, 0, 65542, -3735472, 0, 65544, -3669990, 0, 1, -3669989, 0, 2, -3669934, 0, 9, -3604437, 0, 1, -3604436, 0, 2, -3538860, 0, 9, -3407796, 0, 196616, -3407777, 0, 1, -3407776, 0, 2, -3342281, 0, 1, -3342280, 0, 2, -3342261, 0, 196612, -3342260, 0, 262152, -3342256, 0, 65538, -3342252, 0, 6, -3342251, 0, 4, -3342250, 0, 7, -3342249, 0, 5, -3276749, 0, 196616, -3276740, 0, 65538, -3276726, 0, 131079, -3276725, 0, 131073, -3276724, 0, 131080, -3276719, 0, 196608, -3276718, 0, 196615, -3276716, 0, 65539, -3276713, 0, 65541, -3211227, 0, 1, -3211226, 0, 2, -3211213, 0, 262152, -3211200, 0, 196616, -3211190, 0, 65538, -3211186, 0, 1, -3211183, 0, 6, -3211182, 0, 7, -3211181, 0, 7, -3211180, 0, 131077, -3211177, 0, 65541, -3145680, 0, 1, -3145679, 0, 2, -3145677, 0, 196617, -3145664, 0, 262152, -3145647, 0, 65539, -3145641, 0, 65541, -3080141, 0, 327688, -3080140, 0, 196611, -3080134, 0, 9, -3080131, 0, 1, -3080130, 0, 2, -3080128, 0, 196617, -3080124, 0, 1, -3080123, 0, 2, -3080111, 0, 65539, -3080105, 0, 65544, -3014609, 0, 6, -3014608, 0, 4, -3014607, 0, 7, -3014606, 0, 131074, -3014605, 0, 131073, -3014604, 0, 8, -3014594, 0, 196611, -3014592, 0, 327688, -3014591, 0, 196611, -3014585, 0, 6, -3014584, 0, 5, -3014582, 0, 65538, -3014575, 0, 65539, -2949090, 0, 196614, -2949073, 0, 65542, -2949068, 0, 65544, -2949060, 0, 65537, -2949058, 0, 6, -2949057, 0, 4, -2949056, 0, 131073, -2949055, 0, 131080, -2949049, 0, 65542, -2949048, 0, 65544, -2949044, 0, 196611, -2949041, 0, 196613, -2949040, 0, 196610, -2949039, 0, 65539, -2883568, 0, 1, -2883567, 0, 2, -2883554, 0, 9, -2883549, 0, 65537, -2883546, 0, 6, -2883545, 0, 4, -2883544, 0, 8, -2883542, 0, 196609, -2883511, 0, 196616, -2883508, 0, 6, -2883507, 0, 131073, -2883506, 0, 131074, -2883505, 0, 7, -2883504, 0, 7, -2883503, 0, 131077, -2818010, 0, 65539, -2818008, 0, 65541, -2818006, 0, 6, -2818005, 0, 8, -2817994, 0, 6, -2817993, 0, 7, -2817992, 0, 7, -2817991, 0, 8, -2817981, 0, 65538, -2817975, 0, 327688, -2752475, 0, 196613, -2752474, 0, 65539, -2752472, 0, 65541, -2752470, 0, 65539, -2752469, 0, 65541, -2752467, 0, 65537, -2752458, 0, 65542, -2752455, 0, 65544, -2752453, 0, 65537, -2752439, 0, 9, -2752432, 0, 1, -2752431, 0, 2, -2686943, 0, 6, -2686942, 0, 4, -2686941, 0, 4, -2686940, 0, 7, -2686939, 0, 4, -2686938, 0, 131077, -2686936, 0, 65544, -2686934, 0, 65542, -2686933, 0, 131078, -2686932, 0, 131073, -2686931, 0, 131074, -2686930, 0, 4, -2686929, 0, 131080, -2686913, 0, 1, -2686912, 0, 2, -2686882, 0, 1, -2686881, 0, 2, -2621407, 0, 65539, -2621391, 0, 131079, -2621390, 0, 4, -2621389, 0, 4, -2621388, 0, 131080, -2621372, 0, 196610, -2621370, 0, 196609, -2555871, 0, 65542, -2555857, 0, 65537, -2555846, 0, 65538, -2555845, 0, 65538, -2555836, 0, 131079, -2555835, 0, 7, -2555834, 0, 4, -2555833, 0, 131080, -2555815, 0, 1, -2555814, 0, 2, -2490341, 0, 1, -2490340, 0, 2, -2490338, 0, 9, -2490332, 0, 65538, -2490318, 0, 65537, -2490317, 0, 65537, -2424751, 0, 65538, -2359255, 0, 1, -2359254, 0, 2, -2293734, 0, 131079, -2293733, 0, 131073, -2293732, 0, 131080, -2293702, 0, 1, -2293701, 0, 2, -2293687, 0, 1, -2293686, 0, 2, -2228176, 0, 65537, -2228168, 0, 65537, -2228156, 0, 1, -2228155, 0, 2, -2228136, 0, 65537, -2162658, 0, 131079, -2162657, 0, 131073, -2162656, 0, 131080, -2162653, 0, 196616, -2162652, 0, 196616, -2162624, 0, 65537, -2162609, 0, 1, -2162608, 0, 2, -2097117, 0, 327688, -2097116, 0, 262152, -2097103, 0, 65537, -2097102, 0, 196616, -2097101, 0, 196616, -2097100, 0, 65537, -2097095, 0, 196616, -2031596, 0, 1, -2031595, 0, 2, -2031582, 0, 131079, -2031581, 0, 131073, -2031580, 0, 131080, -2031574, 0, 65537, -2031566, 0, 327688, -2031565, 0, 262152, -2031561, 0, 65538, -2031559, 0, 262153, -2031554, 0, 65537, -2031523, 0, 1, -2031522, 0, 2, -1966041, 0, 1, -1966040, 0, 2, -1966031, 0, 131079, -1966030, 0, 131073, -1966029, 0, 131080, -1966024, 0, 196608, -1966023, 0, 327688, -1966015, 0, 65537, -1966002, 0, 196616, -1965994, 0, 196616, -1900501, 0, 65538, -1900498, 0, 196616, -1900491, 0, 1, -1900488, 0, 6, -1900487, 0, 4, -1900486, 0, 8, -1900483, 0, 196616, -1900471, 0, 9, -1900466, 0, 262153, -1900458, 0, 196617, -1900443, 0, 65545, -1834979, 0, 65538, -1834974, 0, 1, -1834973, 0, 2, -1834970, 0, 196608, -1834969, 0, 196609, -1834966, 0, 196616, -1834962, 0, 262153, -1834952, 0, 65539, -1834950, 0, 65541, -1834948, 0, 196612, -1834947, 0, 327689, -1834939, 0, 65537, -1834931, 0, 196611, -1834930, 0, 327688, -1834927, 0, 196613, -1834922, 0, 262152, -1834920, 0, 1, -1834919, 0, 2, -1769434, 0, 3, -1769433, 0, 4, -1769432, 0, 8, -1769430, 0, 262152, -1769427, 0, 196612, -1769426, 0, 327688, -1769416, 0, 65539, -1769414, 0, 131078, -1769413, 0, 131074, -1769412, 0, 4, -1769411, 0, 4, -1769410, 0, 5, -1769406, 0, 196610, -1769404, 0, 196611, -1769395, 0, 6, -1769394, 0, 4, -1769393, 0, 131074, -1769392, 0, 4, -1769391, 0, 4, -1769390, 0, 5, -1769386, 0, 327688, -1769385, 0, 196609, -1769379, 0, 65538, -1703898, 0, 65539, -1703896, 0, 65541, -1703894, 0, 196617, -1703892, 0, 3, -1703891, 0, 4, -1703890, 0, 131073, -1703889, 0, 5, -1703887, 0, 65538, -1703884, 0, 65538, -1703880, 0, 65539, -1703874, 0, 65541, -1703870, 0, 3, -1703869, 0, 4, -1703868, 0, 4, -1703867, 0, 5, -1703865, 0, 65537, -1703859, 0, 65539, -1703854, 0, 65541, -1703852, 0, 196616, -1703850, 0, 3, -1703849, 0, 4, -1703848, 0, 4, -1703847, 0, 5, -1703838, 0, 196616, -1638362, 0, 65542, -1638360, 0, 65541, -1638358, 0, 327688, -1638356, 0, 65539, -1638353, 0, 65541, -1638346, 0, 196613, -1638345, 0, 196610, -1638344, 0, 65539, -1638341, 0, 65537, -1638338, 0, 65541, -1638336, 0, 196612, -1638334, 0, 65539, -1638331, 0, 65541, -1638328, 0, 1, -1638327, 0, 2, -1638323, 0, 65539, -1638318, 0, 65541, -1638317, 0, 196608, -1638316, 0, 327687, -1638314, 0, 65539, -1638311, 0, 65541, -1638302, 0, 262151, -1572838, 0, 65538, -1572824, 0, 131078, -1572823, 0, 4, -1572822, 0, 4, -1572821, 0, 4, -1572820, 0, 131077, -1572817, 0, 65541, -1572814, 0, 6, -1572813, 0, 4, -1572812, 0, 4, -1572811, 0, 131073, -1572810, 0, 4, -1572809, 0, 4, -1572808, 0, 131077, -1572802, 0, 131078, -1572801, 0, 4, -1572800, 0, 131074, -1572799, 0, 4, -1572798, 0, 131077, -1572795, 0, 65544, -1572787, 0, 65539, -1572782, 0, 131078, -1572781, 0, 4, -1572780, 0, 131074, -1572779, 0, 4, -1572778, 0, 131077, -1572775, 0, 65544, -1572770, 0, 196614, -1572766, 0, 327689, -1507281, 0, 65544, -1507278, 0, 65539, -1507257, 0, 3, -1507256, 0, 8, -1507254, 0, 196612, -1507253, 0, 196613, -1507251, 0, 65539, -1507245, 0, 393220, -1507236, 0, 6, -1507235, 0, 7, -1507234, 0, 4, -1507233, 0, 4, -1507232, 0, 7, -1507231, 0, 4, -1507230, 0, 5, -1441742, 0, 65542, -1441721, 0, 65539, -1441720, 0, 131078, -1441719, 0, 4, -1441718, 0, 131073, -1441717, 0, 4, -1441716, 0, 4, -1441715, 0, 131077, -1441708, 0, 65538, -1441700, 0, 65539, -1441694, 0, 65541, -1376189, 0, 65538, -1376185, 0, 65539, -1376167, 0, 131079, -1376166, 0, 7, -1376165, 0, 131074, -1376164, 0, 131075, -1376158, 0, 65541, -1310649, 0, 65539, -1310622, 0, 65541, -1245113, 0, 65542, -1245100, 0, 196616, -1245097, 0, 65545, -1245086, 0, 65544, -1179592, 0, 65538, -1179564, 0, 262151, -1179561, 0, 131081, -1114050, 0, 1, -1114049, 0, 2, -1114037, 0, 65538, -1114028, 0, 327689, -1048493, 0, 131079, -1048492, 0, 131080, -983005, 0, 1, -983004, 0, 2, -917417, 0, 131079, -917416, 0, 131080, -851884, 0, 1, -851883, 0, 2, -786390, 0, 1, -786389, 0, 2, -786338, 0, 65538, -720829, 0, 65537, -720806, 0, 131079, -720805, 0, 131080, -655352, 0, 1, -655351, 0, 2, -655340, 0, 1, -655339, 0, 2, -655306, 0, 1, -655305, 0, 2, -655285, 0, 196616, -655276, 0, 65538, -589749, 0, 262152, -589737, 0, 196616, -589734, 0, 65538, -524216, 0, 1, -524215, 0, 2, -524213, 0, 196617, -524201, 0, 262151, -524193, 0, 196616, -458702, 0, 65538, -458692, 0, 196616, -458677, 0, 327688, -458676, 0, 196611, -458670, 0, 9, -458665, 0, 262153, -458659, 0, 9, -458657, 0, 196617, -393156, 0, 262152, -393145, 0, 65537, -393142, 0, 131079, -393141, 0, 131073, -393140, 0, 131080, -393130, 0, 196611, -393129, 0, 327688, -393126, 0, 196613, -393121, 0, 262152, -393119, 0, 1, -393118, 0, 2, -327668, 0, 1, -327667, 0, 2, -327651, 0, 1, -327650, 0, 2, -327640, 0, 1, -327639, 0, 2, -327620, 0, 196617, -327613, 0, 196616, -327594, 0, 6, -327593, 0, 4, -327592, 0, 131074, -327591, 0, 4, -327590, 0, 4, -327589, 0, 5, -327585, 0, 327688, -327584, 0, 196609, -262092, 0, 65537, -262084, 0, 327688, -262079, 0, 65538, -262077, 0, 262153, -262074, 0, 196616, -262064, 0, 65537, -262058, 0, 65539, -262053, 0, 65541, -262051, 0, 196616, -262049, 0, 3, -262048, 0, 4, -262047, 0, 4, -262046, 0, 5, -196585, 0, 1, -196584, 0, 2, -196559, 0, 1, -196558, 0, 2, -196549, 0, 131079, -196548, 0, 131073, -196547, 0, 131080, -196542, 0, 196608, -196541, 0, 327688, -196539, 0, 196612, -196538, 0, 327689, -196530, 0, 65537, -196527, 0, 1, -196526, 0, 2, -196522, 0, 65539, -196517, 0, 65541, -196516, 0, 196608, -196515, 0, 327687, -196513, 0, 65539, -196510, 0, 65541, -131064, 0, 1, -131063, 0, 2, -131040, 0, 1, -131039, 0, 2, -131029, 0, 9, -131016, 0, 196616, -131009, 0, 1, -131008, 0, 9, -131006, 0, 6, -131005, 0, 4, -131004, 0, 131074, -131003, 0, 4, -131002, 0, 4, -131001, 0, 5, -130997, 0, 196610, -130995, 0, 196611, -130986, 0, 65539, -130981, 0, 131078, -130980, 0, 4, -130979, 0, 131074, -130978, 0, 4, -130977, 0, 131077, -130974, 0, 65544, -65518, 0, 1, -65517, 0, 2, -65506, 0, 393220, -65496, 0, 65537, -65488, 0, 196608, -65487, 0, 196609, -65484, 0, 196616, -65480, 0, 262153, -65470, 0, 65539, -65465, 0, 65541, -65461, 0, 3, -65460, 0, 4, -65459, 0, 4, -65458, 0, 5, -65456, 0, 3, -65455, 0, 8, -65453, 0, 196612, -65452, 0, 196613, -65450, 0, 65539, -65444, 0, 393220, 47, 0, 6, 48, 0, 4, 49, 0, 4, 50, 0, 8, 52, 0, 262152, 55, 0, 196610, 56, 0, 327688, 66, 0, 65539, 71, 0, 65541, 73, 0, 196612, 75, 0, 65539, 78, 0, 65541, 80, 0, 65539, 81, 0, 131078, 82, 0, 4, 83, 0, 131073, 84, 0, 4, 85, 0, 4, 86, 0, 131077, 65573, 0, 6, 65574, 0, 7, 65575, 0, 4, 65576, 0, 4, 65577, 0, 7, 65578, 0, 4, 65579, 0, 4, 65580, 0, 7, 65581, 0, 7, 65582, 0, 131074, 65583, 0, 131075, 65586, 0, 65541, 65588, 0, 196617, 65590, 0, 3, 65591, 0, 4, 65592, 0, 131073, 65593, 0, 5, 65595, 0, 65538, 65602, 0, 65539, 65607, 0, 131078, 65608, 0, 4, 65609, 0, 131074, 65610, 0, 4, 65611, 0, 131077, 65614, 0, 65544, 65616, 0, 65539, 131072, 0, 196614, 131074, 0, 196613, 131075, 0, 196610, 131087, 0, 196612, 131093, 0, 196610, 131099, 0, 196612, 131106, 0, 196613, 131109, 0, 65539, 131122, 0, 65541, 131124, 0, 327688, 131126, 0, 65539, 131129, 0, 65541, 131136, 0, 196613, 131137, 0, 196614, 131138, 0, 65539, 131152, 0, 65539, 131168, 0, 65538, 262143, 0, 6, 196608, 0, 4, 196609, 0, 131073, 196610, 0, 4, 196611, 0, 4, 196612, 0, 4, 196613, 0, 4, 196614, 0, 4, 196615, 0, 4, 196616, 0, 4, 196617, 0, 4, 196618, 0, 4, 196619, 0, 4, 196620, 0, 4, 196621, 0, 4, 196622, 0, 4, 196623, 0, 131073, 196624, 0, 4, 196625, 0, 4, 196626, 0, 4, 196627, 0, 4, 196628, 0, 4, 196629, 0, 4, 196630, 0, 4, 196631, 0, 131074, 196632, 0, 4, 196633, 0, 4, 196634, 0, 4, 196635, 0, 4, 196636, 0, 131073, 196637, 0, 4, 196638, 0, 4, 196639, 0, 4, 196640, 0, 4, 196641, 0, 4, 196642, 0, 4, 196643, 0, 4, 196644, 0, 4, 196645, 0, 131077, 196649, 0, 65537, 196652, 0, 1, 196653, 0, 2, 196658, 0, 131078, 196659, 0, 4, 196660, 0, 4, 196661, 0, 4, 196662, 0, 131077, 196665, 0, 65541, 196669, 0, 6, 196670, 0, 4, 196671, 0, 131073, 196672, 0, 4, 196673, 0, 4, 196674, 0, 131077, 196681, 0, 65538, 196688, 0, 65542, 327679, 0, 65539, 262145, 0, 131077, 262156, 0, 131077, 262159, 0, 131078, 262172, 0, 131078, 262175, 0, 131076, 262176, 0, 131077, 262201, 0, 65544, 262205, 0, 65539, 393215, 0, 65542, 327686, 0, 131077, 327699, 0, 131078, 327725, 0, 65537, 327741, 0, 65542, 327769, 0, 65538, 393239, 0, 1, 393240, 0, 2 )
 
-[node name="Message" type="Node2D" parent="."]
-
-[node name="Mess1" type="NinePatchRect" parent="Message"]
-visible = false
-margin_left = 307.0
-margin_top = -32.0
-margin_right = 443.0
-margin_bottom = 16.0
-texture = ExtResource( 16 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Message/Mess1"]
-margin_left = 7.0
-margin_top = 2.0
-margin_right = 136.0
-margin_bottom = 44.0
-custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
-custom_fonts/font = SubResource( 6 )
-text = "Salut petit, fait attention
-aux ennemies, s'ils te touche
-3 fois tu meurt. bonne chance!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Mess2" type="NinePatchRect" parent="Message"]
-visible = false
-margin_left = 1450.0
-margin_top = -451.0
-margin_right = 1608.0
-margin_bottom = -385.0
-texture = ExtResource( 16 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Message/Mess2"]
-margin_left = 7.0
-margin_top = 2.0
-margin_right = 136.0
-margin_bottom = 44.0
-custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
-custom_fonts/font = SubResource( 6 )
-text = "Resalut petit, si tu veux atteindre
-le sommet, sert toi des checkpoints,
-comme celui la. Tu n'as qu'a passer
-dessus et ca sauvegarde automati-
-quement ta progression!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Mess3" type="NinePatchRect" parent="Message"]
-visible = false
-margin_left = 733.0
-margin_top = -544.0
-margin_right = 896.0
-margin_bottom = -488.0
-texture = ExtResource( 16 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Message/Mess3"]
-margin_left = 7.0
-margin_top = 2.0
-margin_right = 136.0
-margin_bottom = 44.0
-custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
-custom_fonts/font = SubResource( 6 )
-text = "Sait tu que tu peux reapparaitre
-directement a ton dernier checkpoint
-en appuyant sur \"R\" ou \"Start\"
-ou en mourrant ?"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Mess4" type="NinePatchRect" parent="Message"]
-visible = false
-margin_left = 784.0
-margin_top = -1352.0
-margin_right = 960.0
-margin_bottom = -1281.0
-texture = ExtResource( 16 )
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Message/Mess4"]
-margin_left = 8.0
-margin_top = 4.0
-margin_right = 170.0
-margin_bottom = 81.0
-custom_colors/font_color = Color( 0.862745, 0.882353, 0.905882, 1 )
-custom_fonts/font = SubResource( 6 )
-text = "Felicitations, tu as atteint le sommet.
-Comme on-dit 'Un grand voyage
-commence par un petit pas', et t'en as
-fait des pas jusqu'ici. Merci d'avoir jouer,
-tu peux maintenant quitter le jeu."
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Check2" type="Area2D" parent="Message"]
-position = Vector2( 1488, -380 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Message/Check2"]
-position = Vector2( -0.5, 4 )
-shape = SubResource( 7 )
-
-[node name="Check3" type="Area2D" parent="Message"]
-position = Vector2( 809, -495 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Message/Check3"]
-position = Vector2( -0.5, 4 )
-shape = SubResource( 7 )
-
-[node name="Final" type="Area2D" parent="Message"]
-position = Vector2( 873, -1276 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Message/Final"]
-position = Vector2( -0.5, 4 )
-shape = SubResource( 7 )
-
 [node name="Teleport" type="Node2D" parent="."]
 
 [node name="Mess1" type="Area2D" parent="Teleport"]
@@ -316,13 +152,14 @@ __meta__ = {
 shape = SubResource( 15 )
 
 [node name="Mess2" type="Area2D" parent="Teleport"]
-position = Vector2( 1083, -425 )
+position = Vector2( 979, -439 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport/Mess2"]
-shape = SubResource( 15 )
+position = Vector2( -1.5, 0 )
+shape = SubResource( 16 )
 
 [node name="Mess3" type="Area2D" parent="Teleport"]
 position = Vector2( 582, -504 )
@@ -348,6 +185,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Bee"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -378,6 +216,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Bee2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -408,6 +247,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Bee3"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -439,7 +279,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Fly"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -471,7 +310,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Ennemy/Fly2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -599,7 +437,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -630,7 +467,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -661,6 +497,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee3"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -691,6 +528,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee4"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -721,6 +559,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee6"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -751,7 +590,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee7"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -782,7 +620,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee9"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -813,6 +650,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee10"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -843,7 +681,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee12"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -874,7 +711,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee13"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -905,6 +741,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee14"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -935,6 +772,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee15"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -965,7 +803,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee16"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -996,7 +833,6 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee8"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1027,6 +863,7 @@ movementSpeed = 30
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Bee5"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 5 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1058,6 +895,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1089,6 +927,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly2"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1120,6 +959,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly3"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1151,7 +991,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly10"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1183,7 +1022,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly5"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1215,6 +1053,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly11"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1246,7 +1085,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly7"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1278,6 +1116,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly12"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1309,7 +1148,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly8"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1341,7 +1179,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly13"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1373,6 +1210,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly14"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1404,7 +1242,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly15"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1436,7 +1273,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly6"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1468,7 +1304,6 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly4"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -1500,6 +1335,7 @@ orientation = 1
 [node name="Sprite" type="AnimatedSprite" parent="Zone2/Fly9"]
 position = Vector2( 0, -4 )
 frames = ExtResource( 1 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -1771,11 +1607,6 @@ autoplay = "RESET"
 anims/RESET = SubResource( 10 )
 anims/hit = SubResource( 11 )
 
-[connection signal="body_entered" from="Message/Check2" to="." method="_on_Check2_body_entered"]
-[connection signal="body_exited" from="Message/Check2" to="." method="_on_Check2_body_exited"]
-[connection signal="body_entered" from="Message/Check3" to="." method="_on_Check3_body_entered"]
-[connection signal="body_exited" from="Message/Check3" to="." method="_on_Check3_body_exited"]
-[connection signal="body_entered" from="Message/Final" to="." method="_on_Final_body_entered"]
 [connection signal="body_entered" from="Teleport/Mess1" to="." method="_on_Mess1_body_entered"]
 [connection signal="body_entered" from="Teleport/Mess2" to="." method="_on_Mess2_body_entered"]
 [connection signal="body_entered" from="Teleport/Mess3" to="." method="_on_Mess3_body_entered"]

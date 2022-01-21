@@ -3,6 +3,7 @@ extends Control
 
 func _ready():
 	get_tree().paused = false
+	Global.dontShowIntro = false
 
 
 func _process(delta):
