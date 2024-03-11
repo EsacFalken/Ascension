@@ -1,6 +1,6 @@
 # Ascension 
 
-Ascension is a small action-platformer that I created during my last game Jam. You play a little blue guy in its climb of a mountain.
+Ascension is a small action-platformer that I created during a game Jam. You play a little blue guy in its climb of a mountain.
 
 Controls
 --------
@@ -22,14 +22,10 @@ Controller:
 
 Credits
 -------
-Design, code, sfx - SupaHolmes
+Design, code, sfx - cezelot
 Art - Kenney Asset (Pixel Line Platformer)
 Music - LunaLucid (Free Creative Commons BGM collection)
 
 License
 -------
 The source code is available under the [MIT license](./LICENSE.txt).
-
-
-➡ Follow me on [Itch.io](https://supaholmes.itch.io) and [GitHub](https://github.com/SupaHolmes) for more games
-➡ Contact : [Gmail](supaholmes@gmail.com)
